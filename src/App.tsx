@@ -92,7 +92,7 @@ function App() {
                 }}
                 className="mx-auto text-center font-serif text-xl text-rose-500 xs:text-2xl sm:text-4xl"
                 key={line}>
-                {line.split("").map((char) => {
+                {line.split("").map((char, index) => {
                   return (
                     <motion.span
                       variants={{
@@ -117,7 +117,7 @@ function App() {
                           },
                         },
                       }}
-                      key={char}>
+                      key={`${line}-${index}`}>
                       {char}
                     </motion.span>
                   );
